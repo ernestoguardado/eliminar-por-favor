@@ -1,0 +1,184 @@
+codigo para visual code :: media cueri, flexbox 
+                                                            HTML
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+---<h1></h1> = Encabesado de titulo
+---<p></p> = escribir parrafos 
+---<a></a> = Ancla para menu de inicio 
+---<hr> = crear una linea de divicion 
+---<button></button> = crear botones 
+---<span></span> = al agregar un selector o clase dentro del span daro color al tener configurado background
+---<nav></nav> un espacio de contenido dentro del apartado de la pagina
+---<strong></strong> = resalta texto en negrita dentro de un parrafo al seleccionar dentro de una palabra o parrafo
+---<ol><ol/> = Lista ordenada.
+---<ul><ul/> = Lista desordena
+
+                                                            CSS
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+---padding(relleno), el espacio alrededor del contenido, es el espacio alrededor del texto del párrafo.
+---border(marco), la línea que se encuentra fuera del relleno. Ej.. border: 5px solid black;
+---margin(margen), el espacio fuera del elemento que lo separa de los demás.
+---font size: 50px; = tamano de fuente 
+---font weight: = crear opacida o transparencia en texto
+---color: green = color de fuente.
+---text-decoration: none; comando para quitar linea en el texto
+---text-transform: uppercase; para convertir el texto en mayusculas.
+---letter-spacing: 2px; para separar las letras 
+---line-height: establece la altura de una casilla remarcada por líneas. Comúnmente se usa para establecer la distancia entre líneas de texto. A         nivel de elementos de bloque, define la altura mínima de las casillas encuadradas por líneas dentro del elemento.
+---width ==(ancho del elemento)
+---background-coloR == el color de fondo del contenido y del relleno
+---background:== url(../imagenes/botella.jpg);= para insertar una imagen desde  ccs
+---background-position: == center; =posicionar la imagenen 
+---background-attachment:= contain;= determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque        contenedor
+---contain := Escala la imagen al mayor tamaño posible sin recortarla ni estirarla.
+   background-size: cover; = especifica el tamaño de las imágenes de fondo.
+---cover := Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada          vertical u horizontalmente para que no quede un espacio vacío.
+---initial := palabra clave para establecer una propiedad en su valor inicial.
+---inherit := palabra clave para hacer que la propiedad de un elemento sea la misma que su padre.
+---revert := palabra clave para restablecer una propiedad al valor establecido por la hoja de estilo del agente de usuario (o por los estilos de         usuario, si existen).
+---revert-layer := palabra clave para restablecer una propiedad al valor establecido en una capa de cascada anterior.
+---all := propiedad le permite restablecer todas las propiedades a su estado inicial, heredado, revertido o desactivado a la vez.
+---first-line := selector de pseudoelementos, si la cantidad de palabras aumenta o disminuye, solo seleccionará la primera línea para resaltarla
+----------------------------------------------------------------------------------------------------------------------------------------------------
+---text-overflow := determina como el contenido que se borra y que no se muestra, va a hacérsele notar a los usuarios. Puede ser cortado,    acoplarse o mostrar una    elipsis (' …',
+           ejp.....Sintaxis                                     Mas  Valores
+              white-space: nowrap;                           text-overflow: clip;
+              overflow: hidden;                              white-space: initial;
+      Valor   text-overflow: " [..]";                       text-overflow: ellipsis; 
+-----------------------------------------------------------------------------------------------------------------------------------------------------                                                       
+
+                                                              
+                                                              FLEXBOX
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+---Display = flex 0 inline-flex : para darle movilida a cajas o elementos en linea o columna, darle la flexcividad a cualquier clase o propiedad
+---Display: block := El elemento genera un cuadro de elemento de bloque.
+---Display: inline := El elemento genera uno o más cuadros de elemento en línea.
+---Display: inline-block := El elemento genera una caja de elemento de bloque que fluye con el contenido iluminado como si fuera una sola caja en       línea (comportándose como un elemento mejorado)
+---Diplay: none := Desaparece la visualización de un elemento para que no tenga ningún efecto en el diseño (el documento se representa como si el       elemento no existiera). Todos los elementos descendentes también tienen su pantalla apagada.
+---
+
+---flex-direction:= posee cuatro posibles valores: row, row-reverse, column, column-reverse
+---flex-wrap: = wrap = al aplicar el display para ajustar el desbordamiento se puede ejecuar wrap o nowrap
+   flex : 1 1 auto = donde los valores son igual a flex-grow, flex-shrink, auto. 
+---flex-grow = se puede utilizar para distribuir el espacio en proporción.  los elementos flexibles pueden crecer a lo largo del eje principal desde     su flex-basis.
+---flex-shrink = propiedad controla cómo se quita. Si no tenemos suficiente espacio en el contenedor para colocar nuestros elementos y flex-shrinkse     establece en un número entero positivo, entonces el elemento puede volverse más pequeño que el flex-basis. 
+---flex-flow:= row wrap = al aplicar display: flex; podemos controlar desde este mando la verticalidad y su bidemensionalidad
+---flex: none = creará elementos flexibles totalmente inflexibles. Es como si escribieras flex: 0 0 auto. Los artículos no pueden crecer ni              encogerse, pero se distribuirán usando flexbox con una flex-basis de auto.
+---align items := alineará los elementos sobre el eje cruzado.
+   El valor inicial para esta propiedad es stretch razón por la cual los artículos se ajustan por defecto a la altura de aquel más alto. En efecto se    ajustan para llenar el contenedor flex — el artículo más alto define la altura de este.
+---flex: initial = se restablece con los valores iniciales de Flexbox
+---flex: auto :=es lo mismo que usar  flex: 1 1 auto , es como con  flex:initial pero en este caso los artículos pueden crecer y llenar el contendor     así como encoger si se requiere.
+---flex: <positive-number> = <1> := Una abreviación que es común en tutoriales es  flex: 1 o flex: 2 y más. Es como usar flex: 1 1 0
+---flex-start := para que los artículos se alineen al comienzo del contenedor flex.
+---flex-end := para alinearlos al final. 
+---flex center := para alinearlos al centro. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+---justify-content = es usada para alinear los artículos en el eje principal, cuya  flex-direction dirección del flujo se define; El valor inicial es 
+---flex-start = el que alineará los elementos en el borde inicial del contenedor,
+---flex-end = alinearlos al final 
+---center = para alinearlos en el centro.
+---space-between = tomar todo el espacio libre después de que se hayan dispuesto los elementos y compartirlo uniformemente entre los elementos para      que haya la misma cantidad de espacio entre cada elemento. 
+---space-around = Para generar la misma cantidad de espacio a la derecha y a la izquierda de cada elemento,
+---space-evenly = para hacer que los elementos tengan el mismo espacio a su alrededor,los elementos tienen un espacio de tamaño completo en cada         extremo.
+---align-self:=  
+---text-shadow: 3px 3px 1px black  = aplica una sombra al texto del elemento. Sus cuatro valores son. 
+   El primer valor en píxeles asigna el desplazamiento horizontal de la sombra desde el texto. 
+   el segundo valor en píxeles asigna el desplazamiento vertical de la sombra desde el texto. un valor negativo la desplazaría hacia arriba.
+   El tercer valor en píxeles asigna radio de desenfoque de la sombra —un valor grande es igual a una sombra borrosa.
+   el cuarto valor asigna el color base de la sombra.
+
+
+
+
+                                                                   RESPONSIVE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Hover = para resaltar colores en texto o botones.
+box-shadow: = x, y , degradado, tonacion, color.
+box-sizing: =
+border = justificar los bordes en tamano, solid, y color
+border-radius: = tamano del radio que desee.
+box-sizing: border-box = debe calcular el ancho y alto total de un elemento. width:100%; border:solid #5B6DCD 10px; padding:5px;
+border-box: = Las propiedades de e incluyen el contenido, relleno y borde pero no incluyen el margen width. Las dimensiones del elemento se calculan como: ancho = borde + relleno + ancho del contenido, y altura = borde + relleno + altura del contenido.
+togle= de comparacion si esta o no esta.
+
+///////////////////////////////////media cueri
+media (max-width: 600px) {       
+    .facet_sidebar{         = para generar parametros de tamano, formas o colores dentro de un margen    
+        display: none;        limitado de la pagina entre lo ancho y largo.
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+La siguiente es una lista completa de todos los elementos en bloque de HTML (aunque "en bloque" no se define técnicamente para los elementos que son nuevos en HTML5).
+
+<address>
+Información de contacto.
+<article> HTML5
+Contenido de Articulo.
+<aside> HTML5
+Contenido adicional.
+<audio> HTML5
+Reproductor de audio
+<blockquote>
+Bloque de "cita".
+<canvas> HTML5
+Dibujo canvas.
+<dd>
+Descripción de definición.
+<div>
+División de documento.
+<dl>
+Lista de definición.
+<fieldset>
+Etiqueta de conjunto de campos.
+<figcaption> HTML5
+Leyenda de figura.
+<figure> HTML5
+Grupos contenido multimedia con una leyenda (ver <figcaption>).
+<footer> HTML5
+Sección o pie de página.
+<form>
+Formulario de entrada.
+<h1> (en-US), <h2> (en-US), <h3> (en-US), <h4> (en-US), <h5> (en-US), <h6> (en-US)
+Niveles de cabecera 1-6.
+<header> HTML5
+Sección o cabecera de página.
+<hgroup> HTML5
+Grupos información de encabezado.
+<hr>
+Regla Horizontal (línea divisoria).
+<li>
+Elemento de lista.
+<main>
+Engloba el único contenido central del documento.
+<nav>
+Contiene enlaces de navegación.
+<noscript>
+Contenido para ser usado si los scripts no son soportados o permitidos.
+<ol>
+Lista ordenada.
+<output> (en-US) HTML5
+Formulario de salida.
+<p>
+Párrafo.
+<pre>
+Texto preformateado.
+<section> HTML5
+Sección de una página web.
+<table>
+Tabla.
+<tfoot> (en-US)
+Pie de tabla.
+<ul>
+Lista no ordenada.
+<video> HTML5
+Reproductor de vídeo.
+
+Los siguientes elementos son "en línea":
+
+b, big, i, small, tt
+abbr, acronym, cite, code, dfn, em, kbd, strong, samp, time, var
+a, bdo, br, img, map, object, q, script, span, sub, sup
+button, input, label, select, textarea
+
